@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="Zapoj sa do súťaže Wheedstudio a vyhraj 2 lístky na Hip Hop Žije alebo 2 GTA albumy na CD.">
+<title>WHEEDSTUDIO — SÚŤAŽ O SKVELÉ VÝHRY</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+--black:#101010;
+--white:#f3f1ec;
+--red:#c52e20;
+--grey:#77746e;
+--line:rgba(255,255,255,.2);
+}
+
+* {
+box-sizing:border-box;
+}
+
+html {
+scroll-behavior:smooth;
+}
+
+body {
+margin:0;
+background:var(--black);
+color:var(--white);
+font-family:'DM Sans',Arial,sans-serif;
+}
+
+a {
+color:inherit;
+}
+
+.wrap {
+width:min(1120px,calc(100% - 40px));
+margin:auto;
+}
+
+header {
+padding:24px 0;
+border-bottom:1px solid var(--line);
+}
+
+.nav {
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.logo {
+font-size:15px;
+font-weight:900;
+letter-spacing:.14em;
+text-decoration:none;
+}
+
+.nav-label {
+font-size:10px;
+font-weight:800;
+letter-spacing:.17em;
+color:#aaa;
+text-transform:uppercase;
+}
+
+/* ÚVOD */
+
+.hero {
+padding:85px 0 65px;
+}
+
+.eyebrow {
+display:flex;
+align-items:center;
+gap:10px;
+font-size:11px;
+font-weight:900;
+letter-spacing:.2em;
+text-transform:uppercase;
+color:var(--red);
+}
+
+.eyebrow:before {
+content:"";
+width:28px;
+height:2px;
+background:var(--red);
+}
+
+.hero h1 {
+font-family:'Barlow Condensed',Impact,sans-serif;
+font-size:clamp(65px,13vw,155px);
+line-height:.82;
+letter-spacing:-.045em;
+text-transform:uppercase;
+font-weight:900;
+margin:30px 0;
+}
+
+.hero h1 span {
+display:block;
+}
+
+.outline {
+color:transparent;
+-webkit-text-stroke:2px var(--white);
+}
+
+.hero h1 .red {
+color:var(--red);
+}
+
+.intro {
+max-width:650px;
+font-size:17px;
+line-height:1.7;
+color:#c3c1bb;
+}
+
+.partners {
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+gap:13px;
+margin-top:35px;
+}
+
+.partner {
+border:1px solid #555;
+padding:12px 17px;
+font-size:12px;
+font-weight:900;
+letter-spacing:.1em;
+text-transform:uppercase;
+}
+
+.cross {
+color:var(--red);
+font-weight:900;
+}
+
+.cta {
+display:inline-block;
+margin-top:30px;
+background:var(--red);
+color:white;
+text-decoration:none;
+padding:17px 25px;
+font-size:12px;
+font-weight:900;
+letter-spacing:.1em;
+text-transform:uppercase;
+transition:.2s;
+}
+
+.cta:hover {
+background:#e33b2c;
+}
+
+/* SEKCIE */
+
+section {
+padding:75px 0;
+border-top:1px solid var(--line);
+}
+
+.section-head {
+margin-bottom:35px;
+}
+
+.section-head h2 {
+font-family:'Barlow Condensed',sans-serif;
+font-size:clamp(45px,8vw,82px);
+line-height:.9;
+text-transform:uppercase;
+margin:15px 0;
+}
+
+.section-head p {
+color:#aaa;
+font-size:14px;
+line-height:1.7;
+max-width:550px;
+}
+
+/* VÝHRY */
+
+.prizes {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.prize {
+border:1px solid #494949;
+padding:35px;
+min-height:270px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.prize-number {
+font-family:'Barlow Condensed',sans-serif;
+font-size:75px;
+font-weight:900;
+line-height:1;
+color:var(--red);
+}
+
+.prize h3 {
+font-family:'Barlow Condensed',sans-serif;
+font-size:38px;
+text-transform:uppercase;
+margin:20px 0 10px;
+}
+
+.prize p {
+font-size:13px;
+line-height:1.7;
+color:#aaa;
+margin:0;
+}
+
+/* POSTUP */
+
+.red-section {
+background:var(--red);
+color:white;
+border:0;
+}
+
+.red-section .eyebrow {
+color:white;
+}
+
+.red-section .eyebrow:before {
+background:white;
+}
+
+.red-section .section-head p {
+color:#f3d5d0;
+}
+
+.steps {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.step {
+border-top:3px solid white;
+padding-top:18px;
+}
+
+.step small {
+font-weight:900;
+letter-spacing:.15em;
+}
+
+.step h3 {
+font-family:'Barlow Condensed',sans-serif;
+font-size:29px;
+text-transform:uppercase;
+margin:12px 0;
+}
+
+.step p {
+font-size:13px;
+line-height:1.7;
+color:#f4deda;
+}
+
+/* FORMULÁR */
+
+.form-section {
+background:var(--white);
+color:var(--black);
+}
+
+.form-layout {
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:60px;
+align-items:start;
+}
+
+.form-section .eyebrow {
+color:var(--red);
+}
+
+.form-title {
+font-family:'Barlow Condensed',sans-serif;
+font-size:clamp(55px,8vw,90px);
+line-height:.85;
+text-transform:uppercase;
+margin:20px 0;
+}
+
+.form-description {
+font-size:14px;
+line-height:1.8;
+color:var(--grey);
+}
+
+.form {
+display:grid;
+gap:15px;
+}
+
+.form label {
+font-size:11px;
+font-weight:900;
+letter-spacing:.1em;
+text-transform:uppercase;
+}
+
+.form input,
+.form textarea {
+width:100%;
+padding:16px;
+margin-top:8px;
+border:1px solid #c9c6bf;
+background:transparent;
+color:var(--black);
+font-family:inherit;
+font-size:14px;
+outline:none;
+border-radius:0;
+}
+
+.form input:focus,
+.form textarea:focus {
+border-color:var(--red);
+}
+
+.form textarea {
+min-height:135px;
+resize:vertical;
+}
+
+.form textarea::placeholder,
+.form input::placeholder {
+color:#999;
+}
+
+.consent {
+display:flex;
+align-items:flex-start;
+gap:10px;
+font-size:11px;
+line-height:1.6;
+color:#666;
+}
+
+.consent input {
+width:16px;
+height:16px;
+margin:2px 0 0;
+flex-shrink:0;
+accent-color:var(--red);
+}
+
+.form button {
+background:var(--red);
+color:white;
+border:0;
+padding:19px;
+font-family:inherit;
+font-size:12px;
+font-weight:900;
+letter-spacing:.13em;
+text-transform:uppercase;
+cursor:pointer;
+}
+
+.form button:hover {
+background:#9e2116;
+}
+
+.form-note {
+font-size:11px;
+line-height:1.6;
+color:#777;
+}
+
+/* PÄTIČKA */
+
+footer {
+padding:28px 0;
+}
+
+.footer-content {
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.footer-brand {
+font-weight:900;
+font-size:12px;
+letter-spacing:.13em;
+}
+
+footer p {
+font-size:10px;
+color:#777;
+margin:0;
+}
+
+/* MOBILNÁ VERZIA */
+
+@media(max-width:700px) {
+.wrap {
+width:calc(100% - 30px);
+}
+
+.hero {
+padding:65px 0 50px;
+}
+
+.prizes {
+grid-template-columns:1fr;
+}
+
+.steps {
+grid-template-columns:1fr;
+}
+
+.form-layout {
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.prize {
+min-height:230px;
+}
+
+.hero h1 {
+font-size:clamp(65px,17vw,110px);
+}
+
+.partners {
+gap:8px;
+}
+
+.partner {
+font-size:10px;
+padding:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="wrap nav">
+<a href="#" class="logo">WHEEDSTUDIO®</a>
+<div class="nav-label">Špeciálna súťaž</div>
+</div>
+</header>
+
+<main>
+
+<!-- ÚVOD -->
+
+<div class="wrap hero">
+
+<div class="eyebrow">
+Špeciálna súťaž pre účastníkov prednášky
+</div>
+
+<h1>
+<span>VYHRAJ</span>
+<span class="outline">SKVELÉ</span>
+<span class="red">CENY.</span>
+</h1>
+
+<p class="intro">
+V spolupráci s Ruka Hore a Universal Music sme si pre vás pripravili špeciálnu súťaž!
+
+Zapoj sa a získaj šancu vyhrať 2 vstupenky na festival Hip Hop Žije na zastávku podľa vlastného výberu alebo 2 GTA albumy na CD.
+</p>
+
+<div class="partners">
+<div class="partner">WHEEDSTUDIO</div>
+<div class="cross">×</div>
+<div class="partner">RUKA HORE</div>
+<div class="cross">×</div>
+<div class="partner">UNIVERSAL MUSIC</div>
+</div>
+
+<a href="#sutaz" class="cta">
+ZAPOJIŤ SA DO SÚŤAŽE ↗
+</a>
+
+</div>
+
+<!-- VÝHRY -->
+
+<section id="vyhry">
+<div class="wrap">
+
+<div class="section-head">
+<div class="eyebrow">O čo súťažíme?</div>
+
+<h2>
+DVE SKVELÉ<br>
+VÝHRY.
+</h2>
+
+<p>
+Pripravili sme si pre vás atraktívne ceny, ktoré potešia každého fanúšika hudby a hip-hopu.
+</p>
+</div>
+
+<div class="prizes">
+
+<div class="prize">
+<div class="prize-number">01</div>
+
+<div>
+<h3>2× LÍSTOK NA HIP HOP ŽIJE</h3>
+
+<p>
+Vyhraj dve vstupenky na festival Hip Hop Žije!
+
+Vyber si ľubovoľnú zastávku festivalu podľa dostupnosti a podmienok organizátora a zaži nezabudnuteľnú atmosféru.
+</p>
+</div>
+</div>
+
+<div class="prize">
+<div class="prize-number">02</div>
+
+<div>
+<h3>2× GTA ALBUM CD</h3>
+
+<p>
+Získaj dva kusy GTA albumu na originálnom CD.
+
+Skvelá výhra pre každého hudobného fanúšika alebo zberateľa.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- AKO SA ZAPOJIŤ -->
+
+<section class="red-section">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Ako sa zapojiť?
+</div>
+
+<h2>
+TRI JEDNODUCHÉ<br>
+KROKY.
+</h2>
+
+<p>
+Zapojenie do súťaže je jednoduché. Stačí vyplniť formulár a podeliť sa s nami o svoje dojmy z prednášky.
+</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+<small>01 / TVOJE ÚDAJE</small>
+
+<h3>VYPLŇ MENO A E-MAIL</h3>
+
+<p>
+Napíš svoje meno a e-mailovú adresu, aby sme ťa mohli kontaktovať v prípade výhry.
+</p>
+</div>
+
+<div class="step">
+<small>02 / TVOJA ODPOVEĎ</small>
+
+<h3>PODEĽ SA O SVOJE DOJMY</h3>
+
+<p>
+Napíš nám, čo sa ti na prednáške najviac páčilo alebo čo nové si sa naučil.
+</p>
+</div>
+
+<div class="step">
+<small>03 / SÚŤAŽ</small>
+
+<h3>SI ZARADENÝ!</h3>
+
+<p>
+Po úspešnom odoslaní formulára budeš zaradený do súťaže o skvelé ceny.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FORMULÁR -->
+
+<section class="form-section" id="sutaz">
+
+<div class="wrap form-layout">
+
+<div>
+
+<div class="eyebrow">
+Prihláška do súťaže
+</div>
+
+<h2 class="form-title">
+ZAPOJ<br>
+SA AJ TY.
+</h2>
+
+<p class="form-description">
+Chceš vyhrať 2 vstupenky na Hip Hop Žije alebo 2 GTA albumy na CD?
+</p>
+
+<p class="form-description">
+Vyplň formulár a napíš nám, čo sa ti na prednáške páčilo alebo čo nové si sa naučil.
+</p>
+
+<strong style="font-size:12px;color:#b12f19;letter-spacing:.1em">
+WHEEDSTUDIO × RUKA HORE × UNIVERSAL MUSIC
+</strong>
+
+</div>
+
+<form
+class="form"
+action="https://formsubmit.co/Wheedstudio@gmail.com"
+method="POST"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="Nová prihláška do súťaže WHEEDSTUDIO"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="true"
+>
+
+<label>
+MENO A PRIEZVISKO *
+<input
+type="text"
+name="Meno a priezvisko"
+placeholder="Zadaj svoje meno a priezvisko"
+required
+>
+</label>
+
+<label>
+E-MAILOVÁ ADRESA *
+<input
+type="email"
+name="email"
+placeholder="tvoj@email.sk"
+required
+>
+</label>
+
+<label>
+ČO SA TI PÁČILO NA PREDNÁŠKE ALEBO ČO SI SA NAUČIL? *
+<textarea
+name="Odpoveď z prednášky"
+placeholder="Napíš nám, čo ťa na prednáške zaujalo, čo sa ti páčilo alebo čo nové si sa naučil..."
+required
+></textarea>
+</label>
+
+<label class="consent">
+<input
+type="checkbox"
+name="Súhlas so spracovaním osobných údajov"
+value="Áno"
+required
+>
+<span>
+Súhlasím so spracovaním svojich osobných údajov na účely evidencie účasti v súťaži a kontaktovania v prípade výhry.
+</span>
+</label>
+
+<button type="submit">
+ODOSLAŤ A ZAPOJIŤ SA DO SÚŤAŽE ↗
+</button>
+
+<p class="form-note">
+Po úspešnom odoslaní formulára bude tvoja prihláška doručená organizátorovi súťaže. Pri prvom použití služby FormSubmit je potrebné aktivovať doručovanie e-mailov.
+</p>
+
+</form>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+
+<div class="wrap footer-content">
+
+<div class="footer-brand">
+WHEEDSTUDIO®
+</div>
+
+<p>
+WHEEDSTUDIO × RUKA HORE × UNIVERSAL MUSIC
+</p>
+
+<p>
+SÚŤAŽ · HIP HOP ŽIJE
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
